@@ -1,0 +1,101 @@
+/* 컨텐츠 */
+
+body {
+    margin: 0;
+    background-image: url(img/background.jpg);
+    background-repeat: no-repeat -y;
+    background-size: cover;
+    height: inherit;
+    font-family: 'Abel', sans-serif;
+}
+
+.container {
+    border-top: 10px solid #72dede;
+    border-bottom: 10px solid #72dede;
+    background: #fff;
+    min-height: 100vh;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.container h1 { font-weight:10; line-height: 1.8; }
+
+/* 투두리스트 헤더 */
+#task-input {
+  transition: padding-top 0.2s ease, margin-top 0.2s ease;
+  width: 80%;
+  border: 1px solid #72dede;
+  padding-top: 2px;
+  padding-bottom: 3px;
+}
+
+#task-input:focus {
+  outline:none;
+  border-bottom: 3px solid #72dede;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  transition: 0.2s;
+  padding-top: 35px;
+}
+.input-area {
+  position: relative;
+}
+#task-input + label > span {
+  font-weight: 300;
+  margin: 0;
+  position: absolute;
+  color: #8f8f8f;
+  font-size: 14px;
+  top: 6px;
+  left: 0;
+  -webkit-transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+  transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+}
+
+#task-input:focus + label > span {
+  top: 0px;
+  color: #333;
+}
+
+#add-button { border: none; height: 31px; padding: 0 8px 0 8px; background:  #72dede; }
+
+/* 투두리스트 탭메뉴 */
+.task-area {
+    border: 1px solid lightgray;
+    margin-top: 1em;
+}
+
+.task-tabs {
+    display: flex;
+    border-bottom: 1px solid lightgray;
+    position: relative;
+}
+
+.task-tabs div {
+    padding: 1em ;
+}
+/* left 5 90 180*/
+#under-line {
+    height: 4px;
+    background-color: #72dede;
+    position: absolute;
+    width: 56px;
+    left: 5px;
+    top: 53px;
+    padding: 0;
+    transition: all 0.3s ease;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+.task-done {
+    text-decoration: line-through;
+}
+
+.task-tabs div{
+    cursor: pointer;
+}
