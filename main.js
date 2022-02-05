@@ -54,18 +54,18 @@ function render(){
     for(let i=0; i<list.length; i++){
       if(list[i].isComplete == true){
         resultHTML += `<div class="task">
-            <div class="task-done">${list[i].taskContent}</div>
-            <div>
-              <button onclick="toggleComplete('${list[i].id}')">check</button>
-              <button onclick="deleteTask('${list[i].id}')">delete</button>
+            <div class="task-done"><span>${list[i].taskContent}</span></div>
+            <div class="button-box">
+              <button class="checkbutton" onclick="toggleComplete('${list[i].id}')"><i class="fa fa-undo" aria-hidden="true"></i></button>
+              <button class="deletebutton" onclick="deleteTask('${list[i].id}')"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
             </div>
           </div>`;
       } else {
       resultHTML += `<div class="task">
-          <div>${list[i].taskContent}</div>
-          <div>
-            <button onclick="toggleComplete('${list[i].id}')">check</button>
-            <button onclick="deleteTask('${list[i].id}')">delete</button>
+          <div><span>${list[i].taskContent}</span></div>
+          <div class="button-box">
+            <button class="checkbutton" onclick="toggleComplete('${list[i].id}')"><i class="fa fa-check" aria-hidden="true"></i></button>
+            <button class="deletebutton" onclick="deleteTask('${list[i].id}')"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
           </div>
         </div>`;
       }

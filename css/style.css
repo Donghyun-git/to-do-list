@@ -2,7 +2,7 @@
 
 body {
     margin: 0;
-    background-image: url(img/background.jpg);
+    background-image: url(../img/background.jpg);
     background-repeat: no-repeat -y;
     background-size: cover;
     height: inherit;
@@ -59,6 +59,32 @@ body {
 
 #add-button { border: none; height: 31px; padding: 0 8px 0 8px; background:  #72dede; }
 
+.button-box {
+  display: flex;
+}
+.button-box button {
+  border-style:none;
+  background-color: #fff;
+  width: 60px;
+  height: 100%;
+  transition: 0.3s ease;
+}
+
+.button-box .checkbutton:hover{
+  background-color: #84e92a;
+}
+
+.button-box .deletebutton:hover{
+  background-color: #d46a6a;
+}
+
+.button-box button i {
+  font-size: 20px;
+}
+.button-box button .fa-undo { color: lightgray;}
+.button-box button .fa-check{ color: #09d636;}
+.button-box button .fa-trash-o { color: red;}
+
 /* 투두리스트 탭메뉴 */
 .task-area {
     border: 1px solid lightgray;
@@ -89,7 +115,11 @@ body {
 .task {
     display: flex;
     justify-content: space-between;
-    padding: 1em;
+
+}
+.task span {
+  display: block;
+  padding: 1em;
 }
 
 .task-done {
