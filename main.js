@@ -47,7 +47,7 @@ function addTask(){
 function render(){
   if(mode == "all"){
     list = taskList
-  }else if(mode == "ongoing" || mode == "done"){
+  } else if(mode == "ongoing" || mode == "done"){
     list = filterList
   }
     let resultHTML = '';
